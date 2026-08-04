@@ -16,7 +16,7 @@ timezone:
 
 title: Hamoon # the main title
 
-tagline: a cybersecurity weblog # it will display as the subtitle
+tagline: im a cyber security researcher and a red teamer # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   this is my personal weblog. where i post my every day research
