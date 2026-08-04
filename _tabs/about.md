@@ -43,7 +43,7 @@ Designed and deployed a massive home lab environment consisting of **25+ virtual
 ###  Lab Architecture & Mind Map
 Here is the Xmind mind map I created to plan and document my AD lab environment:
 
-![Lab Architecture Mind Map](/assets/active directory LAB.xmind)
+![Lab Architecture Mind Map](/assets/"active directory LAB.xmind")
 
 ---
 
