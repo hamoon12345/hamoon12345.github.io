@@ -240,7 +240,7 @@ chown -R caddy:caddy /var/www/decoy
 
 Edit `/etc/caddy/Caddyfile`:
 
-```caddy
+```bash
 c2.yourdomain.com {
     # Use the Cloudflare origin certificate
     tls /etc/caddy/certs/cert.pem /etc/caddy/certs/key.pem
