@@ -134,7 +134,7 @@ ufw allow 51820/udp
 ufw enable
 ```
 
-> Note: Opening 80/443 on the backend defeats the purpose of the redirector. The original draft incorrectly left those ports open on the backend.
+> Note: Opening 80/443 on the backend defeats the purpose of the redirector.
 
 ---
 
@@ -366,9 +366,6 @@ Save the following as `/root/custom-ua.json` (or any path you prefer):
 }
 ```
 
-> The original profile you wrote contained hundreds of nearly identical / AI-generated path and file names.  
-> That creates noisy, unrealistic URIs. Keep the lists short and realistic for better OPSEC.
-
 ### 5.4 Import the Profile
 
 Inside the Sliver console:
@@ -390,7 +387,6 @@ generate beacon \
 ```
 
 The generated implant will use the exact User-Agent defined in the `stealth` profile, which matches the filter on the Caddy redirector.
-```
 
 
 
