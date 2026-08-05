@@ -17,7 +17,7 @@ I'm passionate about offensive security, Active Directory exploitation, and comm
 | **Active Directory** | MCSA, MCSE |
 | **Linux** | LPIC-1, LPIC-2 |
 | **Web Application Security** | OWASP Top Ten, SANS SEC542 (Web App Penetration Testing), SANS SEC642 (Advanced Web App Testing) |
-| **Offensive Security (C2)** | CRTO, CRTP |
+| **Offensive Security** | CRTO, CRTP, PEN 200, PEN 300 |
 | **Networking** | Network+, CCNA |
 
 ---
