@@ -1,6 +1,6 @@
 ---
 title: "OPSEC-Hardened Sliver C2 Infrastructure"
-date: 2026-08-05 12:19:03 +0200
+date: 2026-08-04 00:00:00 +0000
 categories: [Red Team, C2]
 tags: [sliver, c2, opsec, redirector, wireguard, cloudflare, red-team]
 description: "Setting up an OPSEC-safe Sliver C2 server with redirectors, WireGuard tunneling, Cloudflare fronting, and basic host hardening for red team operations."
