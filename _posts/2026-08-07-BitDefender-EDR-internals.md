@@ -267,7 +267,7 @@ real builder is still unlocated. This is recorded honestly in §12 rather than p
 
 ### 5.3 Connection attestation — the handshake
 
-```C
+```bash
 __int64 __fastcall ConnectNotifyCallback(
         PFLT_PORT ClientPort,
         PVOID ServerPortCookie,
