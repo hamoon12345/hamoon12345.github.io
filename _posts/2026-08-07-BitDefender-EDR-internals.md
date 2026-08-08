@@ -4,6 +4,7 @@ date: 2026-08-07 00:00:00 +0000
 categories: [Red Team, EDR]
 tags: [EDR, driver, opsec, Bitdefender]
 description: "documenting important drivers in bitdefender EDR antigravity zone, and analysing how it catches bad guys"
+toc: true
 image:
   path: /assets/EDRbit.png
   alt: EDR internals
