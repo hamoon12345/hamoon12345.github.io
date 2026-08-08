@@ -39,6 +39,6 @@ This work is published under [MIT][mit] License.
 [mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
 
 
-# quick set up: if you want to use this theme just click on: use this template. then go to repository settings and change the name to: your-username.github.io and then go to the page and click build using github. after that you can now put your content in your weblog
+# quick set up: if you want to use this theme just click on: use this template. then go to repository settings and change the name to: your-username.github.io and then go to the page and click build using github. after that you can now put your content in your weblog ( if you don't see use the template just use fork and you are ready to go! )
 <br>
 cheers!
