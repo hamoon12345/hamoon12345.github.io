@@ -180,7 +180,7 @@ DriverEntry
 ```
 
 ![ATC version](/assets/mini.png)
-![ATC version](/assets/ini2.png)
+![ATC version](/assets/mini2.png)
 
 `DriverEntry` hands off quickly. `sub_1405F5540` builds driver-level state (globals, locks,
 worker objects). `sub_1405EECE0` constructs the filter instance and calls
