@@ -19,18 +19,18 @@ Warning: this version is still not intended for production operations. It can ge
 
 ## Table of Contents
 
-1. [Executive Summary](#1-executive-summary)
-2. [Part 1 — The Original Codebase: What Every File Does](#2-part-1--the-original-codebase-what-every-file-does)
-3. [Part 2 — Modification Philosophy](#3-part-2--modification-philosophy)
-4. [Part 3 — Per-File Modifications (Exact Code)](#4-part-3--per-file-modifications-exact-code)
-5. [Part 4 — New Files](#5-part-4--new-files)
-6. [Part 5 — Deleted Files](#6-part-5--deleted-files)
-7. [Part 6 — Build / Project Metadata Changes](#7-part-6--build--project-metadata-changes)
-8. [Part 7 — Behavioral Delta Summary](#8-part-7--behavioral-delta-summary)
-9. [Part 8 — writing a decryptor](#9-part-8--writing--a--decryptor)
-10. [Part 9 - reconverting our binary to a shell code for in memory running](#10-part-9--writing--a--shellcode)
-11. [Part 10 — Residual Fingerprints & Accepted Risk](#10-part-9--residual-fingerprints--accepted-risk)
-12. [Appendix — Type & Namespace Rename Map](#appendix--type--namespace-rename-map)
+1. [Executive Summary]
+2. [Part 1 — The Original Codebase: What Every File Does]
+3. [Part 2 — Modification Philosophy]
+4. [Part 3 — Per-File Modifications (Exact Code)]
+5. [Part 4 — New Files]
+6. [Part 5 — Deleted Files]
+7. [Part 6 — Build / Project Metadata Changes]
+8. [Part 7 — Behavioral Delta Summary]
+9. [Part 8 — writing a decryptor]
+10. [Part 9 - reconverting our binary to a shell code for in memory running]
+11. [Part 10 — Residual Fingerprints & Accepted Risk]
+12. [Appendix — Type & Namespace Rename Map]
 
 ---
 
