@@ -1,6 +1,6 @@
 ---
 title: "Loader's on Steroids"
-date: 2026-09-08 00:00:00 +0000
+date: 2026-08-09 00:00:00 +0000
 categories: [Red Team, tools]
 tags: [tool, hardening, opsec, tools]
 description: ""
