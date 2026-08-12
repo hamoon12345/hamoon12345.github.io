@@ -4,52 +4,56 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-##  Hello, I'm a Security Researcher & Junior Red Teamer
+## Security Researcher | Junior Red Teamer
 
-I'm passionate about offensive security, Active Directory exploitation, and command-and-control (C2) development. I thrive on simulating advanced adversaries to help organizations strengthen their defenses.
+Focus areas: offensive security, Active Directory tradecraft, and C2 development/extension.  
+Primary goal is realistic adversary simulation against enterprise environments.
 
 ---
 
-###  Certifications & Technical Knowledge
+### Certifications & Training
 
 | Domain | Certifications / Training |
 | :--- | :--- |
 | **Active Directory** | MCSA, MCSE |
 | **Linux** | LPIC-1, LPIC-2 |
-| **Web Application Security** | OWASP Top Ten, SANS SEC542 (Web App Penetration Testing), SANS SEC642 (Advanced Web App Testing) |
-| **Offensive Security** | CRTO, CRTP, PEN 200, PEN 300 |
+| **Web Application Security** | OWASP Top 10, SANS SEC542, SANS SEC642 |
+| **Offensive Security** | CRTO, CRTP, PEN-200, PEN-300 |
 | **Networking** | Network+, CCNA |
 
 ---
 
-###  C2 Frameworks I Work With & Develop
+### C2 Frameworks
 
-I have extensive experience operating, extending, and developing for modern C2 frameworks:
+Hands-on experience operating, extending, and writing tooling for:
 
-- **Cobalt Strike** (Aggressor scripts, BOFs, and custom tooling)
-- **Sliver C2**
+- **Cobalt Strike** — Aggressor scripts, BOFs, custom post-exploitation tooling
+- **Sliver**
 - **Mythic**
 
 ---
 
-###  Notable Projects
+### Projects
 
-#### 1. Cobalt Strike BOFs (Binary Object Files)
-Developed several custom BOFs to extend Cobalt Strike's functionality for post-exploitation, privilege escalation, and evasion techniques.
+#### Cobalt Strike BOFs
+Custom Binary Object Files focused on post-exploitation, privilege escalation, and evasion.
 
-#### 2. Enterprise Active Directory Lab
-Designed and deployed a massive home lab environment consisting of **25+ virtual machines** simulating a real enterprise network. This lab includes:
+#### Enterprise Active Directory Lab
+Home lab with **25+ VMs** modeling a segmented enterprise environment:
+
 - Multiple domain controllers
-- Windows workstations and servers (various OS versions)
+- Windows workstations + servers (mixed OS versions)
 - Linux targets
 - Network segmentation and routing
 
 ---
 
-###  Lab Architecture & Mind Map
-Here is the Xmind mind map I created to plan and document my AD lab environment:
+### Lab Architecture
+
+Xmind mind map used for planning and documentation:
 
 ![Lab Architecture Mind Map](/assets/active directory LAB.xmind)
+
 ![Lab Architecture Mind Map](/assets/img1.jpeg)
 ![Lab Architecture Mind Map](/assets/img2.jpeg)
 ![Lab Architecture Mind Map](/assets/img3.jpeg)
@@ -58,30 +62,17 @@ Here is the Xmind mind map I created to plan and document my AD lab environment:
 
 ---
 
-###  My Public Notes & Research
+### Public Notes
 
-I maintain extensive study notes and research logs. Feel free to browse them:
-
--  **Hunt Notes & OWASP Notes**  
-  [Link to Notion](https://app.notion.com/p/my-hunt-notes-and-owasp-notes-804099b7f5fc4ef1953be0513b3168b7?source=copy_link)
-
--  **Windows Server / MCSA Notes**  
-  [Link to Notion](https://app.notion.com/p/windows-server-MCSA-24ce3454e6ca80399946e468e3e5cab9?source=copy_link)
-
--  **CCNA Notes**  
-  [Link to Notion](https://app.notion.com/p/CCNA-2a3e3454e6ca80c4a9e8eb96110a14b1?source=copy_link)
-
--  **SEC565 (Advanced Red Teaming) Notes**  
-  [Link to Notion](https://app.notion.com/p/SEC565-2b8e3454e6ca80cd91d8f94e704dbfdf?source=copy_link)
-
--  **Linux & LPIC Notes**  
-  [Link to Notion](https://app.notion.com/p/linux-and-lpics-notes-214e3454e6ca80399dddf0295dc15280?source=copy_link)
+- [Hunt Notes & OWASP Notes](https://app.notion.com/p/my-hunt-notes-and-owasp-notes-804099b7f5fc4ef1953be0513b3168b7?source=copy_link)
+- [Windows Server / MCSA Notes](https://app.notion.com/p/windows-server-MCSA-24ce3454e6ca80399946e468e3e5cab9?source=copy_link)
+- [CCNA Notes](https://app.notion.com/p/CCNA-2a3e3454e6ca80c4a9e8eb96110a14b1?source=copy_link)
+- [SEC565 (Advanced Red Teaming) Notes](https://app.notion.com/p/SEC565-2b8e3454e6ca80cd91d8f94e704dbfdf?source=copy_link)
+- [Linux & LPIC Notes](https://app.notion.com/p/linux-and-lpics-notes-214e3454e6ca80399dddf0295dc15280?source=copy_link)
 
 ---
 
-###  Current Focus
+### Current Focus
 
-- Sharpening my red team tradecraft
-- Continuous learning through hands-on lab environments
-
----
+- Red team tradecraft refinement
+- Continuous lab-based practice
