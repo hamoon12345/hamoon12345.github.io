@@ -800,37 +800,6 @@ The loader reimplements PE loader math by hand — not because it can't use `Get
 
 ---
 
-## 7. The Evasion Catalog (Technique → MITRE → Detection)
-
-| # | Evasion technique | Where | MITRE ATT&CK (approx.) | What it dodges | What beats it |
-|---|---|---|---|---|---|
-| 1 | Payload staged in GIF Comment Extensions | `extract_gif_comments` | T1027.002 / T1036.005 | Static AV scanning, file-carving | Entropy scan on comment blocks; npm integrity hashing |
-| 2 | Fragments scattered across npm folders | `STAGING_PATHS` / `collect_staged_payload` | T1074 / T1027.002 | Recursive-folder AV, baselining | Package-lock + artifact verification |
-| 3 | LCG scrambling between AES layers | `scramble` | T1027.001 | Signature matching on ciphertext | Statistical analysis; in-lab decrypt chain inversion |
-| 4 | Double AES-128-CBC | `aes_cbc_decrypt` | T1027.013 / T1140 | Static identification of payload | Memory dump at final decrypt; header key extraction |
-| 5 | Redundant secrets in header (seeds carry the keys) | `decrypt_configuration` | T1027.007 | Static analysis effort | Reverse the Builder; seed2/3 → key1/iv1, seed5/6 → key2/iv2 |
-| 6 | Self-contained keys (no C2) | header keys + IVs | (no C2 traffic) | Network IOCs | Runtime memory/ETW key extraction |
-| 7 | Direct syscall trampolines | `build_syscall_stub_with_random` | T1106 / T1129 | API inline hooks | Kernel callbacks, ETW SysCall / Threat-Intel, CET |
-| 8 | SSN recovery from memory *and* disk | `read_ssn_from_disk` | (reflection-ish) | SSN-patching EDRs | Detection of mapping ntdll from disk |
-| 9 | Random NOP sled on trampolines | `build_...` | T1027 (mutation) | Fixed-offset YARA, RWX heuristics | Behavioral "syscall from private RX" rule |
-| 10 | Allocate RW → flip to RX (APC variant) / direct RWX (fiber variant) | Steps 2–5 | T1055 / T1106 | RWX heuristics | Protection-transition telemetry; kernel PTE audit; RWX alloc-call anomaly |
-| 11 | In-memory XOR before staging | `obfuscate` / `unapply` | T1140 / T1027 | Memory scanning mid-stage | Dump at the right moment |
-| 12 | Random pacing + noise decoys | Steps 3 / keep-alive | T1497.001/.003 | Time/behavior sandboxing | Longer-run monitoring; statistical profiling |
-| 13 | APC + alertable-wait self-injection (APC variant) | Step 7 | T1055.004 / T1134-ish | Thread-creation alerts | "APC target executes private RX code" rule |
-| 14 | Fallback thread through raw syscall (APC variant) | Step 8 | T1055.001 / T1106 | Hooked-API telemetry | Kernel thread-start events (Threat-Intel ETW) |
-| 15 | Fiber execution via `SwitchToFiber` (fiber variant) | Step 7 (fiber) | T1055-ish / custom | Thread-creation **and** APC alerts; stack traces | Fiber-switch ETW (rarely instrumented); kernel-mode CSP callback on the region |
-| 16 | Jump-over-junk polymorphic entry prepend (fiber variant) | Step 1 (fiber) | T1027 / T1497 | Signatures on shellcode leading bytes | Multi-sample clustering on the `EB` prefix |
-| 17 | Keep-alive + noise forever | `keep_alive_proc` | (process persistence) | Idle-process identification | Baseline your own daemons |
-| 18 | Per-run RNG seeding | `main` | T1027 / T1497 | Sample correlation, sandbox averages | Threat-intel across runs (they still differ) |
-| 19 | Debug via env toggle (silent default) | `debug` | (anti-forensics) | Log noise, analyst triage time | Run with `LOADER_DEBUG`; env-hound telemetry |
-| 20 | Fresh blob per build (random seeds/keys) | Builder `main` | T1027 / T1497 | File hashing, AV dedup | Rebuild-too-many; seed-space analysis |
-| 21 | Visible, renderable carrier GIFs (not broken files) | Stager `create_visible_gif_bytes` | T1036.005 / T1027.002 | Format validation, human review | Uniform 200×200 blue + `asset_N.gif` naming across 10 folders |
-| 22 | Dead decoy code left in the Builder (`scramble`) | Builder | T1027.007 | Static analysis effort | Note & discard; the real chain is xor/AES/xor/AES/xor |
-
-*(MITRE IDs are approximate mappings — this is a composite loader, not a single ATT&CK technique.)*
-
----
-
 ## 8. Attack Map × Detection Timeline
 
 ```
