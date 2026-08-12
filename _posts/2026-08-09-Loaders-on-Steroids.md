@@ -32,21 +32,6 @@ NOTE : if you change the number to 1 it will be enabled
 3. ***LOADER_SLEEPMASK=0***: Disable the 5‑second Ekko‑style sleep mask.
 4. ***LOADER_DWELL_MS=3000***: Change masked dwell duration (ms).
 
-## Table of Contents
-
-1. The Short Version
-2. Threat Modeling: What This Thing Actually Is
-3. The Entire Technique — Explained Before We Touch Code
-4. The Code, Function by Function
-5. The Build Side: Builder.exe & the GIF Stager
-6. The Byte-Level Deep Dives
-7. The Evasion Catalog (Technique → MITRE → Detection)
-8. Attack Map × Detection Timeline
-9. Defenses — What You Can Actually Do
-10. Forensic & IR Playbook
-11. Detection Engineering (Rule Sketches)
-12. Why Bother? (Threat Perspective)
-
 ---
 
 ## 1. The Short Version
@@ -77,25 +62,6 @@ If you take nothing else away: **this loader is boring-on-purpose.** The defense
 - **Fragmented LOTL staging (E30)** — payload hidden in GIF comment blocks across ten `node_modules` folders; no suspicious file ever exists.
 
 ---
-
-
-## 2. Threat Modeling: What This Thing Actually Is
-
-Before the code, a terminology map, because precision matters in a report like this.
-
-| Term | Meaning | Why it matters here |
-|---|---|---|
-| **Config Loader** | A first-stage component whose output is an encrypted configuration/payload blob | The name says "config" but the mechanics are pure shellcode loading |
-| **Shellcode** | Position-independent machine code, run directly from memory | The final product of everything this loader does |
-| **Staging** | Hiding payload bytes somewhere innocent | GIF comment blocks inside npm package folders |
-| **Direct syscall** | Issuing `syscall` yourself instead of calling the hooked API | Skips the EDR's inline hooks in `ntdll.dll` |
-| **SSN** | System Service Number — the integer the kernel uses to dispatch a syscall | The one "secret" a direct-syscall stub needs |
-| **Trampoline** | A hand-built function that performs a syscall for you | The loader's replacement for the real API |
-| **APC** | Asynchronous Procedure Call — a kernel object that queues a user-mode routine to a thread | The execution vehicle in the APC variant, quieter than thread creation |
-| **Alertable wait** | A wait (`SleepEx`, `WaitForSingleObjectEx`) that also delivers queued APCs | The trigger that fires the APC on cue |
-| **Fiber** | A user-mode execution context with its own stack, managed by the Fiber API — not a thread, not a kernel object | The fiber variant's execution vehicle; a pure stack switch, even quieter than APC |
-| **SwitchToFiber** | The call that hands the CPU from one fiber to another, entirely in user mode | How the fiber variant starts the payload with zero kernel events |
-| **Obfuscation vs. Encryption** | Obfuscation defeats signatures; encryption defeats reading | The loader uses both, layered |
 
 ### The trust model
 
